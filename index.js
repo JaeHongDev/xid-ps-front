@@ -12,7 +12,7 @@ const createPath = function (path = ""){
     return path + ".html";
 }
 
-app.get("*",( req,res,next)=>{
+app.get("*",(req,res,next)=>{
     console.log(createPath(req.path));
     res.sendFile(createPath(req.path),{root:__dirname+"/static/web"});
 })
