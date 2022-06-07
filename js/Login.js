@@ -1,42 +1,38 @@
 import Loading from "./component/Loading.js";
 
+const collegeListUrl = "http://localhost:3000/consonant";
+const loginUrl = "http://localhost:3000/auth/1";
 const Login = {
     init: function (attr) {
         const _this = this;
+
         const $consonants = document.querySelectorAll(".consonants-label");
         const $loginButton = document.getElementById("loginBtn");
-        const $collegeSelector = document.getElementById("college-selector");
-        // preload user id
-        this.loadSavedUserId();
 
+        this.loadSavedUserId(); // preload user id
 
-        $consonants.forEach(function (consonant) {
-            consonant.addEventListener('click', function (event) {
-                const radioId = event.target.attributes["for"].value;
-                const $radioButton = document.getElementById(radioId);
-                const consonantText = $radioButton.value;
-                if (consonantText === null || consonantText === undefined || consonantText === "") return;
-
-                fetch("http://localhost:3000/consonant")
-                    .then(response => response.json())
-                    .then(data => {
-                        $collegeSelector.innerHTML = data.map(function (consonant) {
-                            return `<option value = ${consonant.id}>${consonant.text}</option>`
-                        });
-                    })
-
-            })
-        })
+        $consonants.forEach(consonant=>consonant.addEventListener('click', _this.loadCollegeList)); // initialize consonants radio group event // get all consonants radio group
         $loginButton.addEventListener('click', this.login); // add login button event
-
-
     },
-    login: function (event) {
-        event.preventDefault();
+    loadCollegeList: async function (event) {
+        const radioId = event.target.attributes["for"].value;
+        const $radioButton = document.getElementById(radioId);
+        const consonantText = $radioButton.value;
+
+        const $collegeSelector = document.getElementById("college-selector");
+
+        if (consonantText === null || consonantText === undefined || consonantText === "") return;
+
+        const collegeList = await fetch(collegeListUrl)
+            .then(response => response.json())
+            .then(data => data);
+
+         $collegeSelector.innerHTML = collegeList.map(college => `<option value =${college.id}>${college.text}</option>`)
+    },
+    login: async function (event) {
+        event.preventDefault(); // prevent bubbling event to parent event
 
         const $collegeSelector = document.getElementById('college-selector');
-        $collegeSelector.value;
-
         const $id = document.getElementById("id");
         const $pw = document.getElementById("password");
 
@@ -44,29 +40,32 @@ const Login = {
             id: $id.value,
             password: $pw.value,
             collegeType: $collegeSelector.value
-        };
+        }; // mock data arguments
 
         Loading.start();
-        fetch("http://localhost:3000/auth/1")
+        const authResult = await fetch(loginUrl)
             .then(response => response.json())
-            .then(data => Login.loginSuccessProcess($id.value, data.token))
             .catch(error => console.log(error));
         Loading.stop();
-    },
-    loginSuccessProcess: function (userId, token) {
-        if (token === null) {
+
+
+        if (authResult.token === undefined || authResult.token === null || authResult.token === "") {
             alert("로그인 실패");
             return;
         }
+
         const $saveCheckbox = document.getElementById("save-id-checkbox");
 
         $saveCheckbox.checked
-            ? localStorage.setItem("userId", userId)
-            : localStorage.removeItem("userId");
+            ? localStorage.setItem("userId", authResult.userId)
+            : localStorage.removeItem("userId"); // 아이디 저장 기능 검증
 
-        alert(`환영합니다. ${userId}님`);
-        location.reload();
-    },
+        alert(`환영합니다. ${authResult.userId}님`);
+
+        // please change this code
+        location.reload(); // redirect url
+
+    }, // login Process
     loginFailProcess: function (data) {
     },
     loadSavedUserId: function () {
@@ -76,7 +75,6 @@ const Login = {
         document.getElementById("id").value = userId;
         document.getElementById("save-id-checkbox").checked = true;
     },
-
 }
 Login.init();
 
