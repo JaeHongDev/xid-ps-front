@@ -4,47 +4,103 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title></title>
+    <!-- bootstrap css load -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet">
+    <!-- reset css -->
+    <link href="../css/reset.css" rel="stylesheet">
+    <!-- login css -->
+    <link href="../css/Login.css" rel="stylesheet">
 </head>
 <body>
-
 <section>
-    <form>
-        <div>
-            <h1>XID 메시징 서비스</h1>
+    <div class="login-wrap card">
+        <form>
+            <div class="login-form-inputs">
+                <div>
+                    <h2>
+                        <svg class="bi bi-send" fill="currentColor" height="16" viewBox="0 0 16 16"
+                             width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                        </svg>
+                        XID 메시징 서비스
+                    </h2>
+                </div>
+                <div aria-label="Basic radio toggle button group" class="login-button-group" role="group">
+                    <input autocomplete="off" checked class="btn-check" id="btnradio1" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for="btnradio1">ㄱ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio2" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for="btnradio2">ㄴ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio3" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for="btnradio3">ㄷ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio4" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio4>ㄹ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio5" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio5>ㅁ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio6" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio6>ㅂ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio7" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio7>ㅅ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio8" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio8>ㅇ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio9" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio9>ㅈ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio10" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio10>ㅊ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio11" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio11>ㅋ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio12" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio12>ㅌ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio13" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio13>ㅍ</label>
+
+                    <input autocomplete="off" class="btn-check" id="btnradio14" name="btnradio" type="radio">
+                    <label class="btn btn-outline-primary" for=btnradio14s>ㅎ</label>
+
+                </div>
+                <div>
+                    <select aria-label="Default select example" class="form-select" id="collegeSelector">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="login-form-input-texts">
+                    <input class="form-control underline-input" id="id" placeholder="ID"
+                           type="text">
+                    <input class="form-control underline-input" id="password" placeholder="PW"
+                           type="password">
+                    <div>
+                        <input type="checkbox"/><span>아이디 기억</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-form-button">
+                <button class="btn btn-primary" id="loginBtn">로그인</button>
+            </div>
+        </form>
+        <div class="login-image">
         </div>
-        <div>
-            <button>ㄱ</button>
-            <button>ㄴ</button>
-            <button>ㄷ</button>
-            <button>ㄹ</button>
-            <button>ㅁ</button>
-            <button>ㅂ</button>
-            <button>ㅅ</button>
-            <button>ㅇ</button>
-            <button>ㅈ</button>
-            <button>ㅊ</button>
-            <button>ㅋ</button>
-            <button>ㅌ</button>
-            <button>ㅍ</button>
-            <button>ㅎ</button>
-        </div>
-        <div>
-            <select></select>
-        </div>
-        <div>
-            <input type="text" placeholder="ID"/>
-            <input type="text" placeholder="PW"/>
-            <input type="checkbox"/><span>아이디 기억</span>
-        </div>
-        <div>로그인</div>
-    </form>
+    </div>
 </section>
 <script crossorigin="anonymous"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
-<scrip
+<script src="../js/Login.js"></script>
 </body>
 </html>
