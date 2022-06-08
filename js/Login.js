@@ -4,22 +4,20 @@ const collegeListUrl = "http://localhost:3000/consonant";
 const loginUrl = "http://localhost:3000/auth/1";
 const Login = {
     init: function (attr) {
-        const _this = this;
 
         const $consonants = document.querySelectorAll(".consonants-label");
-        const $loginButton = document.getElementById("loginBtn");
+        const $loginButton = document.querySelector("#loginBtn");
 
         this.loadSavedUserId(); // preload user id
-
-        $consonants.forEach(consonant=>consonant.addEventListener('click', _this.loadCollegeList)); // initialize consonants radio group event // get all consonants radio group
-        $loginButton.addEventListener('click', this.login); // add login button event
+        $consonants.forEach(consonant => consonant.addEventListener('click', this.onLoadCollegeList)); // initialize consonants radio group event // get all consonants radio group
+        $loginButton.addEventListener('click', this.onLogin); // add login button event
     },
-    loadCollegeList: async function (event) {
+    onLoadCollegeList: async function (event) {
         const radioId = event.target.attributes["for"].value;
-        const $radioButton = document.getElementById(radioId);
+        const $radioButton = document.querySelector(`#${radioId}`);
         const consonantText = $radioButton.value;
 
-        const $collegeSelector = document.getElementById("college-selector");
+        const $collegeSelector = document.querySelector("#college-selector");
 
         if (consonantText === null || consonantText === undefined || consonantText === "") return;
 
@@ -27,14 +25,14 @@ const Login = {
             .then(response => response.json())
             .then(data => data);
 
-         $collegeSelector.innerHTML = collegeList.map(college => `<option value =${college.id}>${college.text}</option>`)
+        $collegeSelector.innerHTML = collegeList.map(college => `<option value =${college.id}>${college.text}</option>`)
     },
-    login: async function (event) {
+    onLogin: async function (event) {
         event.preventDefault(); // prevent bubbling event to parent event
 
         const $collegeSelector = document.getElementById('college-selector');
-        const $id = document.getElementById("id");
-        const $pw = document.getElementById("password");
+        const $id = document.querySelector("#id");
+        const $pw = document.querySelector("#password");
 
         const data = {
             id: $id.value,
@@ -54,7 +52,7 @@ const Login = {
             return;
         }
 
-        const $saveCheckbox = document.getElementById("save-id-checkbox");
+        const $saveCheckbox = document.querySelector("#save-id-checkbox");
 
         $saveCheckbox.checked
             ? localStorage.setItem("userId", authResult.userId)
@@ -72,8 +70,8 @@ const Login = {
         const userId = localStorage.getItem("userId");
         if (userId === null || userId === undefined) return;
 
-        document.getElementById("id").value = userId;
-        document.getElementById("save-id-checkbox").checked = true;
+        document.querySelector("#id").value = userId;
+        document.querySelector("#save-id-checkbox").checked = true;
     },
 }
 Login.init();

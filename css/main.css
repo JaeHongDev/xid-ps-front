@@ -1,0 +1,106 @@
+html, body, main {
+    height : 100vh;
+    color:#ffffff
+}
+.xidps-main{
+    height : 100vh;
+    overflow : hidden;
+}
+.xidps-header {
+    height: 70px;
+    padding: 25px 84px 24px 35px;
+    background-color: #0b0827;
+    color: #ffffff;
+    margin-bottom: 1px;
+}
+
+.xidps-header-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.xidps-header-menu a {
+    text-decoration: none;
+    color: white;
+    padding-right: 24px;
+}
+
+.xidps-section{
+    height:100%;
+}
+
+.xidps-aside {
+    max-width: 310px;
+    background-color: #242956;
+    color: #ffffff;
+}
+
+.xidps-nav {
+    padding:42px 0px;
+}
+
+.xidps-article {
+    overflow: scroll;
+    height:100%;
+    padding: 0px 80px;
+}
+
+.xidps-footer {
+    font-family: NanumSquare;
+    font-size: 8px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #b9b9b9;
+}
+.xidps-admin-info{
+    padding:0px 30px;
+}
+.xidps-admin-info div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.xidps-admin-price{
+    margin-top:36px;
+    padding:20px 30px;
+    background-color: #2c347a;
+}
+.xidps-admin-price div{
+    margin-top:2px;
+}
+
+.xidps-admin-treeView{
+    padding:50px 0px;
+}
+
+/* icon gradient style */
+.notification{
+    background:linear-gradient(to bottom, #f28100, #ffdb4d);
+}
+.attach_money{
+    background:linear-gradient(to bottom, #0d8421, #32de00);
+}
+.gradient-icon{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* font-size 0.8rem */
+.fs-7{
+    font-size:0.8rem;
+}
+
+/* bootstrap row has right padding 5px this style is remove padding 5px*/
+.row > *{
+    padding:0px;
+}
+
+/* menu buttons */
+
+.menu-buttons{
+    background-color: #15114a;
+}

@@ -3,19 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <title>XID 메시징 서비스 메인</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- materail font icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- bootstrap css load -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet">
     <!-- reset css -->
     <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
 </head>
 <body>
-    <header></header>
-    <nav></nav>
-    <section></section>
-    <footer></footer>
+<main class="xidps-main">
+    <header class="navbar xidps-header">
+        <div class="col-2">xid 메시징 서비스</div>
+        <div class="col-10 xidps-header-menu">
+            <a href="#">QnA</a>
+            <a href="#">1:1 문의</a>
+        </div>
+    </header>
+    <section class="row xidps-section">
+        <aside class="col-2 xidps-aside">
+            <nav class="xidps-nav">
+                <div class="xidps-admin-info">
+                    <span class="fs-7">xxx대학</span>
+                    <br>
+                    <div>
+                        <span class="fs-6">반갑습니다 관리자님</span>
+                        <span class="fs-7">로그아웃</span>
+                    </div>
+                </div>
+                <div class="xidps-admin-price">
+                    <div>
+                        <span class="material-icons fs-7 notification gradient-icon">notifications</span>
+                        <span class="fs-7">읽지 않은 알림</span>
+                        <span class="float-end fs-7">0건</span>
+                    </div>
+                    <div class="">
+                        <span class="material-icons fs-7 attach_money gradient-icon">attach_money</span>
+                        <span class="fs-7">남은 메시지 수</span>
+                        <span class="float-end fs-7">1000000원</span>
+
+                    </div>
+                </div>
+                <div class="xidps-admin-treeView">
+                    <ul class="ps-0">
+                        <li class="mb-1">
+                            <button aria-expanded="true"
+                                    class="btn border-0 link-light rounded collapsed menu-buttons" data-bs-target="#home-collapse" data-bs-toggle="collapse">
+                                Home
+                            </button>
+                            <div class="collapse show" id="home-collapse">
+                                <ul class="">
+                                    <li><span>Overview</span></li>
+                                    <li><span>Updates</span></li>
+                                    <li><span>Reports</span></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>메시지 발송</li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <article class="col-10 xidps-article">
+            <div class="xidps-article-notice">
+                <div>Warning</div>
+                <div>Normal</div>
+            </div>
+            <div>content</div>
+            <footer class="xidps-footer">
+                (주)씨드시스템 부산광역시 해운대구 센텀동로 71, 1503호 (우동, 벽산이센텀클래스원2차)<br>
+                대표자명 : 손석길 사업자번호 : 605-81-69424 Tel : 1577-3218 Fax : 051)553-1548 E-Mail : skson@xidsys.co.kr
+                이용약관 ㅣ개인정보처리방침<br>
+                COPYRIGHT (C)XIDSYS ALL RIGHTS RESERVED
+            </footer>
+        </article>
+    </section>
+</main>
 </body>
 <script crossorigin="anonymous"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    const main = {
+
+    }
+
+</script>
 </html>
