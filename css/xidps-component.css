@@ -1,0 +1,71 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+body {
+    font-family: NanumSquare ;
+}
+
+.xidps-card{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+}
+
+
+/*<editor-fold desc="xidps font weight">*/
+.xidps-fw-8{
+    font-weight: 800;
+}
+/*</editor-fold>*/
+/*<editor-fold desc="xidps color settings">*/
+/* mid night blue */
+.xidps-color-mdblue{
+    color:#2c347a
+}
+.xidps-bgColor-mdblue{
+    background-color:#2c347a;
+    color:#ffffff;
+}
+/*</editor-fold>*/
+/*<editor-fold desc="xidps icon styles">*/
+/* icon gradient styles*/
+
+.send-icon {
+    background:linear-gradient(21deg, #1eacdb -5%, #00b19f 131%);
+}
+
+/* xidps icon gradient settings*/
+.gradient-icon {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*</editor-fold>*/
+/*<editor-fold desc="xidps radius settings">*/
+.xidps-radius{
+    border-radius: 40px;
+}
+.xidps-radius-l{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.xidps-radius-r{
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.xidps-radius-tl{
+    border-top-left-radius: 40px;
+}
+.xidps-radius-tr{
+    border-top-right-radius: 40px;
+}
+.xidps-radius-bl{
+    border-bottom-left-radius: 40px;
+}
+.xidps-radius-br{
+    border-bottom-right-radius: 40px;
+}
+/*</editor-fold>*/
+
+/*<editor-fold desc="xidps button">*/
+.xidps-btn{
+    height:30px;
+}
+/*</editor-fold>*/

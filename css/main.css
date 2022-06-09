@@ -143,30 +143,21 @@ html, body, main {
     background: linear-gradient(187deg, #1aacd3 96%, #04f1cc 5%, #00ffcb 5%);
 
 }
-
 .gradient-icon {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 /* font-size 0.8rem */
 .fs-7 {
     font-size: 0.8rem;
 }
-
 /* bootstrap row has right padding 5px this style is remove padding 5px*/
 .row > * {
-
 }
-
 .row {
     margin-left: 0px;
-
 }
-
 /* menu buttons */
-
-
 /* xidps common component*/
 
 .xidps-card {
@@ -175,7 +166,6 @@ html, body, main {
     background-color: #fff;
     color:#707070;
 }
-
 .xidps-warn{
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #fff;
@@ -187,5 +177,4 @@ html, body, main {
     letter-spacing: normal;
     color:#ff0000;
     border: solid 1px #f00;
-
 }

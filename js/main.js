@@ -6,7 +6,8 @@ const main = {
 
         const _this = this;
         const $menuButtons = document.querySelectorAll(".xidps-menu-buttons");
-
+        const $priceTooltipButton = document.querySelector("#price-tooltip");
+        $priceTooltipButton.tooltip();
 
         setInterval(_this.onloadMessage, 10000)
         $menuButtons.forEach($menuButton => $menuButton.addEventListener('click', () => {

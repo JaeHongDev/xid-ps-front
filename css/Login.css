@@ -16,7 +16,6 @@ section {
 }
 
 section form {
-    padding: 30px;
     background-color: #ffffff;
 }
 
@@ -25,9 +24,6 @@ section form {
     background-color: #efefef;
 }
 
-.login-form-inputs div {
-    padding: 20px;
-}
 
 .login-form-button button {
     float: right;
@@ -46,7 +42,7 @@ section form {
 }
 
 .login-button-group label {
-    margin:3px;
+    margin: 3px;
 }
 
 .underline-input {
@@ -55,4 +51,12 @@ section form {
     border-right: none;
     box-shadow: none;
     border-radius: 0px;
+    border-bottom:1px solid #707070;
+}
+
+.underline-input:focus {
+    box-shadow: none;
+}
+
+.consonants-label {
 }

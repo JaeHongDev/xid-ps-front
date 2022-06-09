@@ -4,12 +4,26 @@ const collegeListUrl = "http://localhost:3000/consonant";
 const loginUrl = "http://localhost:3000/auth/1";
 const Login = {
     init: function (attr) {
-
+        const $loginForm = document.querySelector("#loginForm");
         const $consonants = document.querySelectorAll(".consonants-label");
         const $loginButton = document.querySelector("#loginBtn");
 
         this.loadSavedUserId(); // preload user id
-        $consonants.forEach(consonant => consonant.addEventListener('click', this.onLoadCollegeList)); // initialize consonants radio group event // get all consonants radio group
+
+        $loginForm.addEventListener('keydown',event=>{
+            if(event.keyCode ===13) event.preventDefault();
+        });
+
+        $consonants.forEach(consonant => {
+            consonant.addEventListener('click', this.onLoadCollegeList);
+            // consonant.addEventListener('keydown',event=>{
+            //     console.log(event);
+            //     if(event.keyCode ===13 || event.keyCode === 32){
+            //         _this.onLoadCollegeList(event);
+            //     }
+            // })
+        });
+
         $loginButton.addEventListener('click', this.onLogin); // add login button event
     },
     onLoadCollegeList: async function (event) {
@@ -55,13 +69,13 @@ const Login = {
         const $saveCheckbox = document.querySelector("#save-id-checkbox");
 
         $saveCheckbox.checked
-            ? localStorage.setItem("userId", authResult.userId)
+            ? localStorage.setItem("userId", data.id)
             : localStorage.removeItem("userId"); // 아이디 저장 기능 검증
 
-        alert(`환영합니다. ${authResult.userId}님`);
+        alert(`환영합니다. ${data.id}님`);
 
         // please change this code
-        location.reload(); // redirect url
+       // location.reload(); // redirect url
 
     }, // login Process
     loginFailProcess: function (data) {
