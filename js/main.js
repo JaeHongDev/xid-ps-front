@@ -7,9 +7,10 @@ const main = {
         const _this = this;
         const $menuButtons = document.querySelectorAll(".xidps-menu-buttons");
         const $priceTooltipButton = document.querySelector("#price-tooltip");
-        $priceTooltipButton.tooltip();
 
-        setInterval(_this.onloadMessage, 10000)
+        _this.onloadMessage()
+        _this.onloadPage();
+        //setInterval(_this.onloadMessage, 10000)
         $menuButtons.forEach($menuButton => $menuButton.addEventListener('click', () => {
             _this.removeMenuButtonClass($menuButton)
             _this.onloadPage();
@@ -20,8 +21,8 @@ const main = {
     },
 
     onloadPage: async function () {
-        const sampleDashboardUrl = `https://${location.host}/pages/dashboard.html`;
-
+        const sampleDashboardUrl = `http://${location.host}/pages/dashboard.html`;
+        const url = "http://localhost:63342/xid-ps-front/pages/dashboard.htm";
         const content = document.querySelector("#xidps-content");
         fetch(sampleDashboardUrl).then(response => response.text()).then(html => {
             content.innerHTML = html;
