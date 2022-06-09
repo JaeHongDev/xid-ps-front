@@ -1,11 +1,13 @@
 html, body, main {
-    height : 100vh;
-    color:#ffffff
+    height: 100vh;
+    color: #ffffff
 }
-.xidps-main{
-    height : 100vh;
-    overflow : hidden;
+
+.xidps-main {
+    height: 100vh;
+    overflow: hidden;
 }
+
 .xidps-header {
     height: 70px;
     padding: 25px 84px 24px 35px;
@@ -18,34 +20,35 @@ html, body, main {
     display: flex;
     justify-content: flex-end;
 }
+
 .xidps-header-menu a {
     text-decoration: none;
     color: white;
     padding-right: 24px;
 }
 
-.xidps-section{
-    height:100%;
+.xidps-section {
+    height: 100%;
 }
 
 .xidps-aside {
+    padding: 0px;
     max-width: 310px;
     background-color: #242956;
     color: #ffffff;
 }
 
 .xidps-nav {
-    padding:42px 0px;
+    padding: 42px 0px;
 }
 
 .xidps-article {
     overflow: scroll;
-    height:100%;
-    padding: 0px 80px;
+    height: 100%;
+    padding: 30px 80px;
 }
 
 .xidps-footer {
-    font-family: NanumSquare;
     font-size: 8px;
     font-weight: normal;
     font-stretch: normal;
@@ -55,52 +58,134 @@ html, body, main {
     text-align: center;
     color: #b9b9b9;
 }
-.xidps-admin-info{
-    padding:0px 30px;
+
+.xidps-admin-info {
+    padding: 0px 30px;
 }
-.xidps-admin-info div{
-    display:flex;
+
+.xidps-admin-info div {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.xidps-admin-price{
-    margin-top:36px;
-    padding:20px 30px;
+.xidps-admin-price {
+    margin-top: 36px;
+    padding: 20px 30px;
     background-color: #2c347a;
 }
-.xidps-admin-price div{
-    margin-top:2px;
+
+.xidps-admin-price div {
+    margin-top: 2px;
 }
 
-.xidps-admin-treeView{
-    padding:50px 0px;
+.xidps-admin-treeView {
+    padding: 50px 0px;
+}
+
+.xidps-menu-buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    border-radius: 15px;
+}
+
+.xidps-menu-buttons:hover {
+    background-color: #15114a;
+    border-radius: 15px;;
+    border: 0px;
+}
+
+.xidps-menu-active {
+    background-color: #15114a;
+/ / border-left: 10 px solid white;
 }
 
 /* icon gradient style */
-.notification{
-    background:linear-gradient(to bottom, #f28100, #ffdb4d);
+.notification {
+    background: linear-gradient(to bottom, #f28100, #ffdb4d);
 }
-.attach_money{
-    background:linear-gradient(to bottom, #0d8421, #32de00);
+
+.attach_money {
+    background: linear-gradient(to bottom, #0d8421, #32de00);
 }
-.gradient-icon{
+
+.dashboard {
+    background: linear-gradient(to bottom, #ff03ab, #f89ed1 97%, #6e1bce);
+}
+
+.call {
+
+    background: linear-gradient(to bottom, #00ff08, #00ffe5);
+}
+
+.person_add {
+    background: linear-gradient(to bottom, #09f, #00d3ff);
+}
+
+.groups {
+    background: linear-gradient(to bottom, #ff9292, #f90);
+
+}
+
+.payments {
+    background: linear-gradient(to bottom, #ffd609, #c27b00);
+
+}
+
+.settings {
+    background: linear-gradient(to bottom, #e4e4e4, #616161)
+}
+
+.chat {
+    background: linear-gradient(187deg, #1aacd3 96%, #04f1cc 5%, #00ffcb 5%);
+
+}
+
+.gradient-icon {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* font-size 0.8rem */
-.fs-7{
-    font-size:0.8rem;
+.fs-7 {
+    font-size: 0.8rem;
 }
 
 /* bootstrap row has right padding 5px this style is remove padding 5px*/
-.row > *{
-    padding:0px;
+.row > * {
+
+}
+
+.row {
+    margin-left: 0px;
+
 }
 
 /* menu buttons */
 
-.menu-buttons{
-    background-color: #15114a;
+
+/* xidps common component*/
+
+.xidps-card {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #e4e4e4;
+    background-color: #fff;
+    color:#707070;
+}
+
+.xidps-warn{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color:#ff0000;
+    border: solid 1px #f00;
+
 }
