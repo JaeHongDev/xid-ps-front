@@ -5,22 +5,6 @@ body {
 }
 
 
-
-/*<editor-fold desc="xidps card styles">*/
-.xidps-card {
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #fff;
-}
-
-/* this */
-.xidps-card-blueHead{
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #fff;
-    border-top: 4px solid #2c347a;
-}
-/*</editor-fold>*/
-
-
 /*<editor-fold desc="xidps font weight">*/
 .xidps-fw-8 {
     font-weight: 800;
@@ -95,9 +79,37 @@ body {
 
 /*</editor-fold>*/
 
+/*component*/
 /*<editor-fold desc="xidps button">*/
 .xidps-btn {
     height: 30px;
 }
 
+/*</editor-fold>*/
+/*<editor-fold desc="underline-textbox">*/
+/*this underline textbox is based on bootstrap textbox. */
+.xidps-underline-input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    border-radius: 0px;
+    border-bottom:1px solid #707070;
+}
+.xidps-underline-input:focus {
+    box-shadow: none;
+}
+/*</editor-fold>*/
+/*<editor-fold desc="xidps card styles">*/
+.xidps-card {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+}
+
+/* this */
+.xidps-card-blueHead{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    border-top: 4px solid #2c347a;
+}
 /*</editor-fold>*/

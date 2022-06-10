@@ -1,5 +1,5 @@
 import Loading from "./component/Loading.js";
-
+import api from "../js/api/index.js";
 const collegeListUrl = "http://localhost:3000/consonant";
 const loginUrl = "http://localhost:3000/auth/1";
 const Login = {
@@ -9,21 +9,13 @@ const Login = {
         const $loginButton = document.querySelector("#loginBtn");
 
         this.loadSavedUserId(); // preload user id
-
         $loginForm.addEventListener('keydown',event=>{
+            // form tag prevent submit
             if(event.keyCode ===13) event.preventDefault();
         });
-
         $consonants.forEach(consonant => {
             consonant.addEventListener('click', this.onLoadCollegeList);
-            // consonant.addEventListener('keydown',event=>{
-            //     console.log(event);
-            //     if(event.keyCode ===13 || event.keyCode === 32){
-            //         _this.onLoadCollegeList(event);
-            //     }
-            // })
         });
-
         $loginButton.addEventListener('click', this.onLogin); // add login button event
     },
     onLoadCollegeList: async function (event) {
@@ -35,9 +27,7 @@ const Login = {
 
         if (consonantText === null || consonantText === undefined || consonantText === "") return;
 
-        const collegeList = await fetch(collegeListUrl)
-            .then(response => response.json())
-            .then(data => data);
+        const collegeList =  await api.get(collegeListUrl);
 
         $collegeSelector.innerHTML = collegeList.map(college => `<option value =${college.id}>${college.text}</option>`)
     },
@@ -54,14 +44,14 @@ const Login = {
             collegeType: $collegeSelector.value
         }; // mock data arguments
 
-        Loading.start();
-        const authResult = await fetch(loginUrl)
-            .then(response => response.json())
-            .catch(error => console.log(error));
-        Loading.stop();
+        const authResult = await api.get(loginUrl);
 
+        if(authResult === null) {
+            alert("로그인 실패");
+        }
 
-        if (authResult.token === undefined || authResult.token === null || authResult.token === "") {
+        const {token} = authResult
+        if (token === undefined || token === null || token === "") {
             alert("로그인 실패");
             return;
         }
@@ -73,9 +63,8 @@ const Login = {
             : localStorage.removeItem("userId"); // 아이디 저장 기능 검증
 
         alert(`환영합니다. ${data.id}님`);
-
         // please change this code
-       // location.reload(); // redirect url
+        location.reload(); // redirect url
 
     }, // login Process
     loginFailProcess: function (data) {

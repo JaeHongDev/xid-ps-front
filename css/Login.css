@@ -1,62 +1,15 @@
 body {
     box-sizing: border-box;
-    margin: 0px;
 }
 
-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.xidps-login-form {
+    min-width:540px;
 }
-
-.login-wrap {
-    display: flex;
-    flex-direction: row;
-}
-
-section form {
-    background-color: #ffffff;
-}
-
 .login-image {
-    width: 300px;
+    min-width: 450px;
     background-color: #efefef;
 }
-
-
-.login-form-button button {
-    float: right;
-}
-
-.login-form-input-texts {
-    display: flex;
-    flex-direction: column;
-}
-
-.login-button-group {
-    display: flex;
-    flex-flow: row;
-    max-width: 400px;
-    flex-wrap: wrap;
-}
-
-.login-button-group label {
-    margin: 3px;
-}
-
-.underline-input {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    box-shadow: none;
-    border-radius: 0px;
-    border-bottom:1px solid #707070;
-}
-
-.underline-input:focus {
-    box-shadow: none;
-}
-
 .consonants-label {
+    margin-right:5px;
+    margin-left:5px;
 }
