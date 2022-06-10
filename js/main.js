@@ -22,9 +22,10 @@ const main = {
 
     onloadPage: async function () {
         const sampleDashboardUrl = `http://${location.host}/pages/dashboard.html`;
+        const sampleSendMessageUrl = `http://${location.host}/pages/send-message.html`;
         const url = "http://localhost:63342/xid-ps-front/pages/dashboard.htm";
         const content = document.querySelector("#xidps-content");
-        fetch(sampleDashboardUrl).then(response => response.text()).then(html => {
+        fetch(sampleSendMessageUrl).then(response => response.text()).then(html => {
             content.innerHTML = html;
         });
     },

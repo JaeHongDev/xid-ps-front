@@ -85,6 +85,22 @@ body {
     height: 30px;
 }
 
+.xidps-toggle{
+
+}
+.xidps-toggle button{
+    width:80px;
+    height:40px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #d2d2d2;
+    background-color: #fff;
+    padding: 0 15px;
+}
+.xidps-btn-active {
+    border: solid 1px #0aa8cb;
+    background-color: #addee2;
+}
+
 /*</editor-fold>*/
 /*<editor-fold desc="underline-textbox">*/
 /*this underline textbox is based on bootstrap textbox. */
@@ -93,7 +109,7 @@ body {
     border-left: none;
     border-right: none;
     box-shadow: none;
-    border-radius: 0px;
+    border-radius: 0;
     border-bottom:1px solid #707070;
 }
 .xidps-underline-input:focus {
@@ -113,3 +129,8 @@ body {
     border-top: 4px solid #2c347a;
 }
 /*</editor-fold>*/
+
+
+.xidps-scroll-message{
+    height:240px;
+}

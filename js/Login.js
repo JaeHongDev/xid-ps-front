@@ -48,6 +48,7 @@ const Login = {
 
         if(authResult === null) {
             alert("로그인 실패");
+            return ;
         }
 
         const {token} = authResult
@@ -67,8 +68,6 @@ const Login = {
         location.reload(); // redirect url
 
     }, // login Process
-    loginFailProcess: function (data) {
-    },
     loadSavedUserId: function () {
         const userId = localStorage.getItem("userId");
         if (userId === null || userId === undefined) return;
