@@ -5,10 +5,8 @@ class ButtonGroup extends HTMLElement {
         //aria-label='Basic radio toggle button group' class='d-flex pt-5'
         //<script crossorigin="anonymous" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         const shadowRoot = this.attachShadow({mode: 'open'});
-        const {linkElem, scriptElem} = this.linkAndScriptTag();
+        //const {linkElem, scriptElem} = this.linkAndScriptTag();
 
-        this.shadowRoot.append(linkElem)
-        this.shadowRoot.append(scriptElem);
 
         const consonants = "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ".split("");
 
@@ -18,7 +16,7 @@ class ButtonGroup extends HTMLElement {
         consonants.forEach((consonants, index) => {
             $div.append(..._this.createButton(consonants, index))
         })
-        this.shadowRoot.append($div)
+        this.append($div)
     }
 
     linkAndScriptTag() {

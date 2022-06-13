@@ -2,6 +2,25 @@ body {
     box-sizing: border-box;
 }
 
+.xidps-bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image:url("../public/img/login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.xidps-bg-img{
+    background-image:url("../public/img/login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.xidps-login-image{
+    height:200px;
+}
 .xidps-login-form {
     min-width:540px;
 }

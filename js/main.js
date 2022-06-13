@@ -25,7 +25,7 @@ const main = {
         const sampleSendMessageUrl = `http://${location.host}/pages/send-message.html`;
         const url = "http://localhost:63342/xid-ps-front/pages/dashboard.htm";
         const content = document.querySelector("#xidps-content");
-        fetch(sampleSendMessageUrl).then(response => response.text()).then(html => {
+        fetch(sampleDashboardUrl).then(response => response.text()).then(html => {
             content.innerHTML = html;
         });
     },
