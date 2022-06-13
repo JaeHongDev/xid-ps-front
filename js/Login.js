@@ -28,7 +28,7 @@ const Login = {
         if (consonantText === null || consonantText === undefined || consonantText === "") return;
 
         const collegeList =  await api.get(collegeListUrl);
-
+        console.log(collegeList);
         $collegeSelector.innerHTML = collegeList.map(college => `<option value =${college.id}>${college.text}</option>`)
     },
     onLogin: async function (event) {

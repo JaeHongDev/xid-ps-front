@@ -1,9 +1,12 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-
-body {
-    font-family: NanumSquare;
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-
+body {
+    font-family: 'InfinitySans-RegularA1';
+}
 
 /*<editor-fold desc="xidps font weight">*/
 .xidps-fw-8 {

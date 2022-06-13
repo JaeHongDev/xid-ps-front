@@ -1,6 +1,6 @@
 html, body, main {
     height: 100vh;
-    color: #ffffff
+    background:#f1f4f8;
 }
 
 .xidps-main {
@@ -10,7 +10,7 @@ html, body, main {
 
 .xidps-header {
     height: 70px;
-    padding: 25px 84px 24px 35px;
+    padding: 25px 85px 25px 35px;
     background-color: #0b0827;
     color: #ffffff;
     margin-bottom: 1px;
@@ -27,25 +27,23 @@ html, body, main {
     padding-right: 24px;
 }
 
-.xidps-section {
-    height: 100%;
-}
 
 .xidps-aside {
-    padding: 0px;
-    max-width: 310px;
+    max-width: 300px;
     background-color: #242956;
     color: #ffffff;
 }
 
 .xidps-nav {
-    padding: 42px 0px;
+    padding: 35px 0px;
 }
 
 .xidps-article {
+    /*overflow: scroll;*/
     overflow: scroll;
-    height: 100%;
+    height:100%;
     padding: 30px 80px;
+
 }
 
 .xidps-footer {
@@ -59,9 +57,6 @@ html, body, main {
     color: #b9b9b9;
 }
 
-.xidps-admin-info {
-    padding: 0px 30px;
-}
 
 .xidps-admin-info div {
     display: flex;
@@ -71,7 +66,7 @@ html, body, main {
 
 .xidps-admin-price {
     margin-top: 36px;
-    padding: 20px 30px;
+    padding: 20px 25px;
     background-color: #2c347a;
 }
 
@@ -149,7 +144,7 @@ html, body, main {
 }
 /* font-size 0.8rem */
 .fs-7 {
-    font-size: 0.8rem;
+    font-size: 0.725rem;
 }
 /* bootstrap row has right padding 5px this style is remove padding 5px*/
 .row > * {
@@ -160,7 +155,6 @@ html, body, main {
 }
 /* menu buttons */
 /* xidps common component*/
-
 .xidps-card {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     border: solid 1px #e4e4e4;
